@@ -1,25 +1,24 @@
 @import "tailwindcss";
-:root{--bg:#f6f7f3;--ink:#172b24;--muted:#718078;--green:#165c47}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,Helvetica,sans-serif}button,input,select{font:inherit}button{cursor:pointer}.glass{background:#fff;border:1px solid #e9eee9;box-shadow:0 12px 32px rgba(23,43,36,.04)}
-
-/* Scoped dark palette: retain green accent and high contrast controls. */
-main[data-theme="dark"]{background:#101b18;color:#ecf3ed;min-height:100vh}
-main[data-theme="dark"] .glass,main[data-theme="dark"] aside,main[data-theme="dark"] nav{background:#1a2823!important;border-color:#34453c!important;color:#ecf3ed}
-main[data-theme="dark"] input,main[data-theme="dark"] select{background:#203129!important;color:#f1f7f1!important;border-color:#405449!important}
-main[data-theme="dark"] input::placeholder{color:#9fb2a5}
-main[data-theme="dark"] [class*="text-[#718078]"]{color:#b2c2b7!important}
-main[data-theme="dark"] [class*="bg-[#e7f0e9]"],main[data-theme="dark"] [class*="bg-[#f3f7f3]"],main[data-theme="dark"] [class*="bg-[#f2f5f1]"]{background:#2a4436!important;color:#d8eee0!important}
-main[data-theme="dark"] [class*="border-[#e"]{border-color:#34453c!important}
-main[data-theme="dark"] [class*="bg-white"]{background:#1a2823!important;color:#ecf3ed!important}
-main[data-theme="dark"] [class*="text-[#165c47]"]{color:#82cfa6!important}
-
-/* Apply theme to the entire document, including portals and fixed overlays. */
-html.mizan-dark,html.mizan-dark body{background:#101b18;color:#edf5ee;color-scheme:dark}
-html.mizan-dark main[data-theme="dark"]{background:#101b18;color:#edf5ee}
-html.mizan-dark main[data-theme="dark"] .glass,html.mizan-dark main[data-theme="dark"] aside,html.mizan-dark main[data-theme="dark"] nav{background:#1b2a24!important;border-color:#3a4b41!important;color:#edf5ee!important}
-html.mizan-dark main[data-theme="dark"] .glass p,html.mizan-dark main[data-theme="dark"] .glass h2,html.mizan-dark main[data-theme="dark"] .glass h3{color:inherit}
-html.mizan-dark main[data-theme="dark"] form:has(input) {color:inherit}
-html.mizan-dark main[data-theme="dark"] input,html.mizan-dark main[data-theme="dark"] select{background:#23372d!important;color:#f3f8f4!important;border-color:#53675a!important}
-html.mizan-dark main[data-theme="dark"] .fixed.inset-0 form{background:#1b2a24!important;color:#edf5ee!important}
-html.mizan-dark main[data-theme="dark"] .fixed.inset-0 form button[type="button"]{color:#edf5ee}
-html.mizan-dark main[data-theme="dark"] [class*="bg-[#f0f5f1]"],html.mizan-dark main[data-theme="dark"] [class*="bg-[#edf2ed]"],html.mizan-dark main[data-theme="dark"] [class*="bg-[#eaf0eb]"]{background:#33483b!important}
-html.mizan-dark main[data-theme="dark"] [class*="text-[#a5aea7]"]{color:#c0cdc3!important}
+:root{--bg:#f6f8f5;--ink:#172b24;--muted:#718078;--green:#165c47;--surface:#fff;--line:#e2eae4;--subtle:#edf3ee}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+button,input,select{font:inherit}
+button{cursor:pointer}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid #31a77a;outline-offset:3px}
+.glass{background:var(--surface);border:1px solid var(--line);box-shadow:0 8px 28px rgba(23,43,36,.035)}
+main[data-theme="dark"]{--bg:#0e1714;--ink:#edf5ef;--muted:#aebfb3;--surface:#18251f;--line:#34453a;--subtle:#263a2d;background:var(--bg);color:var(--ink);color-scheme:dark}
+html.mizan-dark,html.mizan-dark body{background:#0e1714;color:#edf5ef;color-scheme:dark}
+main[data-theme="dark"] .glass{background:var(--surface)!important;border-color:var(--line)!important;color:var(--ink)!important}
+main[data-theme="dark"] aside,main[data-theme="dark"] nav{background:var(--surface)!important;border-color:var(--line)!important;color:var(--ink)!important}
+main[data-theme="dark"] .glass :is(h1,h2,h3,h4,p,span,strong,b,div){color:inherit}
+main[data-theme="dark"] [class*="text-[#718078]"],main[data-theme="dark"] [class*="text-[#94a198]"]{color:var(--muted)!important}
+main[data-theme="dark"] [class*="text-[#165c47]"]{color:#8edbb3!important}
+main[data-theme="dark"] [class*="bg-white"]{background:var(--surface)!important;color:var(--ink)!important}
+main[data-theme="dark"] [class*="bg-[#e7f0e9]"],main[data-theme="dark"] [class*="bg-[#f3f7f3]"],main[data-theme="dark"] [class*="bg-[#f2f5f1]"],main[data-theme="dark"] [class*="bg-[#edf2ed]"],main[data-theme="dark"] [class*="bg-[#eaf0eb]"]{background:var(--subtle)!important;color:var(--ink)!important}
+main[data-theme="dark"] [class*="border-[#e"],main[data-theme="dark"] [class*="border-[#d"]{border-color:var(--line)!important}
+main[data-theme="dark"] input,main[data-theme="dark"] select,main[data-theme="dark"] textarea{background:#22352a!important;color:#f2f8f3!important;border-color:#526a59!important}
+main[data-theme="dark"] input::placeholder{color:#9db5a4}
+main[data-theme="dark"] .fixed.inset-0 form{background:var(--surface)!important;color:var(--ink)!important}
+main[data-theme="dark"] .fixed.inset-0 form [class*="bg-[#f2f5f1]"]{background:var(--subtle)!important}
+main[data-theme="dark"] .rounded-\[26px\].bg-\[\#165c47\]{background:#165c47!important;color:#fff!important}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
