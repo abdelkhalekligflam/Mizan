@@ -50,3 +50,56 @@ html.mizan-dark,html.mizan-dark body{background:#0d1411;color:#eef5ef;color-sche
 .mizan-shell [class*="text-4xl"],.mizan-shell [class*="text-3xl"]{font-variant-numeric:tabular-nums}
 @media(max-width:767px){.mizan-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.mizan-metrics>.mizan-balance{grid-column:1/-1}.mizan-metrics .glass{min-height:136px}.mizan-analytics>.glass{min-height:260px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
+/* Mizan 2.0 — refined fintech product shell */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&display=swap');
+:root{font-family:"DM Sans",Arial,sans-serif}
+html,body,button,input,select,textarea{font-family:"DM Sans",Arial,sans-serif}
+.mizan-shell{--m-bg:#f8faf9;--m-surface:#fff;--m-surface-2:#f3f6f4;--m-ink:#192721;--m-muted:#7a8a80;--m-border:#e8ede9;--m-accent:#0f7652;--m-accent-soft:#e9f5ed;background:var(--m-bg);font-size:14px}
+.mizan-shell[data-theme="dark"]{--m-bg:#0d1110;--m-surface:#171c19;--m-surface-2:#222a25;--m-ink:#f1f5f1;--m-muted:#a3b3a7;--m-border:#303b33;--m-accent:#8bdbad;--m-accent-soft:#243a2c}
+.mizan-sidebar{background:var(--m-surface)!important;padding:28px 15px!important}
+.mizan-sidebar>div:first-child{padding:0 13px;margin-bottom:50px}
+.mizan-sidebar>div:first-child strong{font-size:21px;letter-spacing:-.06em;font-weight:700}
+.mizan-sidebar>div:first-child p{font-size:10px;margin-top:1px}
+.mizan-sidebar>div:nth-child(2){padding-left:15px}
+.mizan-sidebar>div:nth-child(3){gap:3px}
+.mizan-sidebar>div:nth-child(3)>button{min-height:43px;border-radius:9px!important;padding:10px 14px;font-size:13px;letter-spacing:-.01em}
+.mizan-sidebar>div:nth-child(3)>button svg{width:17px;height:17px;stroke-width:1.8}
+.mizan-sidebar>div:nth-child(3)>button[class*="bg-[#e7f0e9]"]{background:var(--m-accent-soft)!important;color:var(--m-accent)!important}
+.mizan-account{border-color:var(--m-border);background:var(--m-surface-2)}
+.mizan-header{margin-top:-8px;min-height:63px;margin-bottom:34px;padding-bottom:15px}
+.mizan-header .mizan-avatar{background:var(--m-accent-soft);color:var(--m-accent);border:1px solid var(--m-border)}
+.mizan-header button[title]{border-radius:10px;background:var(--m-surface)!important;border-color:var(--m-border);color:var(--m-ink)!important}
+.mizan-page-title{margin-bottom:30px}
+.mizan-page-title h1{font-size:clamp(28px,2.4vw,36px);font-weight:650;letter-spacing:-.055em}
+.mizan-page-title>div>p:last-child{font-size:13px}
+.mizan-primary-action{background:#0e7754;color:#fff;box-shadow:0 4px 12px rgba(15,118,82,.13);transition:transform .16s,background .16s}
+.mizan-primary-action:hover{background:#095e42;transform:translateY(-1px)}
+.mizan-shell .glass{border:1px solid var(--m-border);box-shadow:0 1px 2px rgba(20,36,26,.02);border-radius:14px!important}
+.mizan-metrics{gap:15px}
+.mizan-metrics .glass{padding:25px!important;min-height:170px}
+.mizan-metrics .glass>svg{width:19px;height:19px;stroke-width:1.9}
+.mizan-metrics .glass p{font-size:12px}
+.mizan-metrics .glass div[class*="text-2xl"]{font-size:29px;letter-spacing:-.05em;font-weight:650}
+.mizan-balance{background:linear-gradient(125deg,#115c46 0%,#0c7251 100%)!important;min-height:170px;border-radius:14px!important;box-shadow:0 10px 25px rgba(12,95,65,.10);padding:25px!important}
+.mizan-balance>div:nth-child(2){font-size:34px;letter-spacing:-.06em;font-weight:650}
+.mizan-balance-symbol{display:grid;place-items:center;width:34px;height:34px;border-radius:10px;background:rgba(255,255,255,.12)}
+.mizan-analytics{gap:15px}
+.mizan-analytics>.glass{padding:25px!important;min-height:350px}
+.mizan-analytics .glass h2{font-size:17px;letter-spacing:-.035em}
+.mizan-analytics .glass p[class*="uppercase"]{font-size:10px;letter-spacing:.14em}
+.mizan-analytics .glass .mt-8.grid{margin-top:38px}
+.mizan-legend-dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:4px}
+.mizan-legend-income{background:#2caa78}
+.mizan-legend-expense{background:#e49b76}
+.mizan-transaction-section{margin-top:30px}
+.mizan-transaction-section h2{font-size:16px;font-weight:650;letter-spacing:-.025em}
+.mizan-transaction-section .glass>div{padding:17px 20px;min-height:76px}
+.mizan-transaction-section .glass>div>div:nth-child(2)>div:first-child{font-weight:600}
+.mizan-shell .glass [class*="border-[#edf1ed]"]{border-color:var(--m-border)!important}
+.mizan-shell[data-theme="dark"] .mizan-metrics .glass,.mizan-shell[data-theme="dark"] .mizan-analytics .glass{background:var(--m-surface)!important;color:var(--m-ink)!important}
+.mizan-shell[data-theme="dark"] .mizan-metrics .glass :is(div,p),.mizan-shell[data-theme="dark"] .mizan-analytics .glass :is(div,h2,p,span){color:var(--m-ink)}
+.mizan-shell[data-theme="dark"] .mizan-metrics .glass [class*="text-[#718078]"],.mizan-shell[data-theme="dark"] .mizan-analytics .glass [class*="text-[#718078]"]{color:var(--m-muted)!important}
+.mizan-shell[data-theme="dark"] .mizan-balance,.mizan-shell[data-theme="dark"] .mizan-balance *{color:#fff!important}
+.mizan-shell[data-theme="dark"] .mizan-primary-action{color:white!important}
+@media(max-width:767px){.mizan-page-title{align-items:flex-start}.mizan-primary-action{width:100%;justify-content:center}.mizan-metrics .glass{min-height:140px;padding:18px!important}.mizan-metrics .glass div[class*="text-2xl"]{font-size:21px}.mizan-analytics>.glass{padding:20px!important}}
