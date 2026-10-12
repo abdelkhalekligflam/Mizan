@@ -232,3 +232,10 @@ html.mizan-dark,html.mizan-dark body{background:#090a0b!important;color:#f2f4f3}
 .mizan-transaction-form{position:relative;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch}
 .mizan-transaction-save{position:sticky;bottom:0;z-index:2;box-shadow:0 0 0 10px var(--m-surface,#fff),0 10px 22px rgba(0,0,0,.2)}
 @media(max-width:640px){.mizan-transaction-overlay{align-items:flex-end!important}.mizan-transaction-form{max-height:calc(100dvh - 48px)!important;padding-bottom:max(28px,env(safe-area-inset-bottom))!important}.mizan-mobile-dock{z-index:40!important}}
+
+/* Unified editing UX on desktop, tablet and mobile. */
+@media(min-width:641px){
+ .mizan-transaction-overlay{align-items:center!important;padding:24px!important}
+ .mizan-transaction-form{max-height:min(90dvh,800px)!important;max-width:480px;overflow-y:auto!important;border-radius:26px!important;padding:28px!important}
+ .mizan-transaction-save{position:sticky!important;bottom:0!important;display:flex!important;visibility:visible!important;min-height:52px;margin-top:8px}
+}
