@@ -226,3 +226,9 @@ html.mizan-dark,html.mizan-dark body{background:#090a0b!important;color:#f2f4f3}
   .mizan-insights input,.mizan-insights select{display:none!important}
   .mizan-v3-chart{height:180px!important}
 }
+
+/* Transaction editor must sit above the persistent mobile dock. */
+.mizan-transaction-overlay{z-index:100!important;isolation:isolate}
+.mizan-transaction-form{position:relative;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch}
+.mizan-transaction-save{position:sticky;bottom:0;z-index:2;box-shadow:0 0 0 10px var(--m-surface,#fff),0 10px 22px rgba(0,0,0,.2)}
+@media(max-width:640px){.mizan-transaction-overlay{align-items:flex-end!important}.mizan-transaction-form{max-height:calc(100dvh - 48px)!important;padding-bottom:max(28px,env(safe-area-inset-bottom))!important}.mizan-mobile-dock{z-index:40!important}}
