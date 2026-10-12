@@ -1,0 +1,9 @@
+"use client";
+import { useEffect,useState } from "react";
+import { supabase } from "@/lib/supabase";
+export default function ResetPassword(){
+ const [password,setPassword]=useState("");const [message,setMessage]=useState("");const [ready,setReady]=useState(false);
+ useEffect(()=>{let alive=true;supabase.auth.getSession().then(({data})=>{if(alive&&data.session)setReady(true)});const {data:{subscription}}=supabase.auth.onAuthStateChange((event,session)=>{if(event==="PASSWORD_RECOVERY"||session)setReady(true)});return()=>{alive=false;subscription.unsubscribe()}},[]);
+ async function submit(e:React.FormEvent){e.preventDefault();const {error}=await supabase.auth.updateUser({password});setMessage(error?error.message:"Mot de passe modifié. Vous pouvez revenir à Mizan.");}
+ return <main className="grid min-h-screen place-items-center px-5"><section className="glass w-full max-w-md rounded-3xl p-8"><h1 className="mb-3 text-2xl font-bold text-[#165c47]">mizan.</h1><h2 className="mb-5 text-xl font-semibold">Nouveau mot de passe</h2>{ready?<form onSubmit={submit}><label className="mb-2 block text-sm">Mot de passe</label><input type="password" minLength={6} required value={password} onChange={e=>setPassword(e.target.value)} className="mb-4 w-full rounded-xl border p-3"/><button className="w-full rounded-xl bg-[#165c47] p-3 font-semibold text-white">Mettre à jour</button></form>:<p className="text-sm text-[#718078]">Ouvrez le lien de réinitialisation reçu par e-mail. Si le lien a expiré, demandez-en un nouveau depuis la connexion.</p>}{message&&<p role="status" className="mt-4 text-sm">{message}</p>}<a href="/" className="mt-6 block text-center text-sm text-[#165c47]">Retour à la connexion</a></section></main>
+}
