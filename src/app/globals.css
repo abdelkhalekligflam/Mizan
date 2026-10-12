@@ -215,3 +215,14 @@ html.mizan-dark,html.mizan-dark body{background:#090a0b!important;color:#f2f4f3}
 .mizan-calendar-income{color:#39a979}.mizan-calendar-expense{color:#db9073}
 @media(max-width:640px){.mizan-calendar-grid{gap:3px}.mizan-calendar-day{min-height:65px;padding:5px;border-radius:7px}.mizan-calendar-day span{font-size:9px}.mizan-calendar-weekday{font-size:9px}.mizan-shell{padding-bottom:calc(110px + env(safe-area-inset-bottom))!important}.mizan-v3-hero{min-height:0!important}.mizan-v3-hero-actions{flex-direction:row!important}.mizan-v3-hero-actions button{font-size:11px!important}}
 @media(min-width:1024px){.mizan-mobile-dock,.mizan-mobile-scrim,.mizan-mobile-sheet{display:none!important}}
+
+@media print{
+  @page{size:A4;margin:15mm}
+  html,body,.mizan-shell,.mizan-shell[data-theme="dark"]{background:#fff!important;color:#111!important;print-color-adjust:exact;-webkit-print-color-adjust:exact}
+  .mizan-sidebar,.mizan-header,.mizan-mobile-dock,.mizan-mobile-sheet,.mizan-mobile-scrim,.mizan-print-action,.mizan-bottom-nav{display:none!important}
+  .mizan-insights{display:block!important;width:100%!important;margin:0!important;padding:0!important}
+  .mizan-insights .glass{break-inside:avoid;background:#fff!important;color:#111!important;border:1px solid #ddd!important;box-shadow:none!important;margin-bottom:14px}
+  .mizan-insights .grid{break-inside:avoid}
+  .mizan-insights input,.mizan-insights select{display:none!important}
+  .mizan-v3-chart{height:180px!important}
+}
