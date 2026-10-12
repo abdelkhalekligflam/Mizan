@@ -11,3 +11,15 @@ main[data-theme="dark"] [class*="bg-[#e7f0e9]"],main[data-theme="dark"] [class*=
 main[data-theme="dark"] [class*="border-[#e"]{border-color:#34453c!important}
 main[data-theme="dark"] [class*="bg-white"]{background:#1a2823!important;color:#ecf3ed!important}
 main[data-theme="dark"] [class*="text-[#165c47]"]{color:#82cfa6!important}
+
+/* Apply theme to the entire document, including portals and fixed overlays. */
+html.mizan-dark,html.mizan-dark body{background:#101b18;color:#edf5ee;color-scheme:dark}
+html.mizan-dark main[data-theme="dark"]{background:#101b18;color:#edf5ee}
+html.mizan-dark main[data-theme="dark"] .glass,html.mizan-dark main[data-theme="dark"] aside,html.mizan-dark main[data-theme="dark"] nav{background:#1b2a24!important;border-color:#3a4b41!important;color:#edf5ee!important}
+html.mizan-dark main[data-theme="dark"] .glass p,html.mizan-dark main[data-theme="dark"] .glass h2,html.mizan-dark main[data-theme="dark"] .glass h3{color:inherit}
+html.mizan-dark main[data-theme="dark"] form:has(input) {color:inherit}
+html.mizan-dark main[data-theme="dark"] input,html.mizan-dark main[data-theme="dark"] select{background:#23372d!important;color:#f3f8f4!important;border-color:#53675a!important}
+html.mizan-dark main[data-theme="dark"] .fixed.inset-0 form{background:#1b2a24!important;color:#edf5ee!important}
+html.mizan-dark main[data-theme="dark"] .fixed.inset-0 form button[type="button"]{color:#edf5ee}
+html.mizan-dark main[data-theme="dark"] [class*="bg-[#f0f5f1]"],html.mizan-dark main[data-theme="dark"] [class*="bg-[#edf2ed]"],html.mizan-dark main[data-theme="dark"] [class*="bg-[#eaf0eb]"]{background:#33483b!important}
+html.mizan-dark main[data-theme="dark"] [class*="text-[#a5aea7]"]{color:#c0cdc3!important}
