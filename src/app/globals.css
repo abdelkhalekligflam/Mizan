@@ -1,2 +1,13 @@
 @import "tailwindcss";
 :root{--bg:#f6f7f3;--ink:#172b24;--muted:#718078;--green:#165c47}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,Helvetica,sans-serif}button,input,select{font:inherit}button{cursor:pointer}.glass{background:#fff;border:1px solid #e9eee9;box-shadow:0 12px 32px rgba(23,43,36,.04)}
+
+/* Scoped dark palette: retain green accent and high contrast controls. */
+main[data-theme="dark"]{background:#101b18;color:#ecf3ed;min-height:100vh}
+main[data-theme="dark"] .glass,main[data-theme="dark"] aside,main[data-theme="dark"] nav{background:#1a2823!important;border-color:#34453c!important;color:#ecf3ed}
+main[data-theme="dark"] input,main[data-theme="dark"] select{background:#203129!important;color:#f1f7f1!important;border-color:#405449!important}
+main[data-theme="dark"] input::placeholder{color:#9fb2a5}
+main[data-theme="dark"] [class*="text-[#718078]"]{color:#b2c2b7!important}
+main[data-theme="dark"] [class*="bg-[#e7f0e9]"],main[data-theme="dark"] [class*="bg-[#f3f7f3]"],main[data-theme="dark"] [class*="bg-[#f2f5f1]"]{background:#2a4436!important;color:#d8eee0!important}
+main[data-theme="dark"] [class*="border-[#e"]{border-color:#34453c!important}
+main[data-theme="dark"] [class*="bg-white"]{background:#1a2823!important;color:#ecf3ed!important}
+main[data-theme="dark"] [class*="text-[#165c47]"]{color:#82cfa6!important}
