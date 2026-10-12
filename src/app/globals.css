@@ -103,3 +103,71 @@ html,body,button,input,select,textarea{font-family:"DM Sans",Arial,sans-serif}
 .mizan-shell[data-theme="dark"] .mizan-balance,.mizan-shell[data-theme="dark"] .mizan-balance *{color:#fff!important}
 .mizan-shell[data-theme="dark"] .mizan-primary-action{color:white!important}
 @media(max-width:767px){.mizan-page-title{align-items:flex-start}.mizan-primary-action{width:100%;justify-content:center}.mizan-metrics .glass{min-height:140px;padding:18px!important}.mizan-metrics .glass div[class*="text-2xl"]{font-size:21px}.mizan-analytics>.glass{padding:20px!important}}
+
+/* Mizan V3: structurally distinct fintech dashboard */
+.mizan-v3{--v3-panel:var(--m-surface);--v3-border:var(--m-border);--v3-text:var(--m-ink);--v3-muted:var(--m-muted)}
+.mizan-v3-hero{position:relative;display:flex;align-items:center;justify-content:space-between;overflow:hidden;min-height:285px;padding:36px 42px;background:linear-gradient(118deg,#123b31 0%,#0d5340 58%,#13745a 100%);border-radius:22px;color:#fff;isolation:isolate}
+.mizan-v3-hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 75% 15%,rgba(145,255,196,.17),transparent 36%);pointer-events:none}
+.mizan-v3-hero-copy{z-index:1}
+.mizan-v3-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:10px;font-weight:700;letter-spacing:.16em;color:#b5dfc7}
+.mizan-v3-live{width:7px;height:7px;background:#8bf4b3;border-radius:50%;box-shadow:0 0 0 4px rgba(139,244,179,.1)}
+.mizan-v3-hero-label{margin-top:29px;font-size:14px;color:#c4dfd0}
+.mizan-v3-balance{margin-top:7px;font-size:clamp(34px,4vw,53px);font-weight:650;letter-spacing:-.065em;line-height:1.1;font-variant-numeric:tabular-nums}
+.mizan-v3-hero-caption{margin-top:13px;font-size:12px;color:#b5d4c3}
+.mizan-v3-hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:25px}
+.mizan-v3-hero-actions button{display:inline-flex;align-items:center;gap:8px;padding:11px 14px;border-radius:9px;font-size:12px;font-weight:650;background:#fff;color:#134b38}
+.mizan-v3-hero-actions button+button{background:rgba(255,255,255,.11);color:#fff;border:1px solid rgba(255,255,255,.22)}
+.mizan-v3-hero-art{position:relative;flex:0 0 260px;height:240px;display:grid;place-items:center;margin-right:5%}
+.mizan-v3-orbit{position:absolute;border:1px solid rgba(210,255,226,.17);border-radius:50%;aspect-ratio:1}
+.orbit-one{width:140px}.orbit-two{width:210px}.orbit-three{width:285px}
+.mizan-v3-art-center{display:grid;place-items:center;width:104px;height:104px;border-radius:27px;background:linear-gradient(135deg,rgba(255,255,255,.24),rgba(255,255,255,.07));border:1px solid rgba(255,255,255,.26);box-shadow:0 20px 50px rgba(0,0,0,.13);transform:rotate(-10deg)}
+.mizan-v3-art-center svg{transform:rotate(10deg)}
+.mizan-v3-stat-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.mizan-v3-stat{padding:23px 25px;border-radius:16px;background:var(--v3-panel);border:1px solid var(--v3-border)}
+.mizan-v3-stat-top{display:flex;align-items:center;justify-content:space-between;gap:10px;color:var(--v3-muted);font-size:12px}
+.mizan-v3-stat-icon{display:grid;place-items:center;width:34px;height:34px;border-radius:10px}
+.mizan-v3-stat-icon.income{background:#e7f7ee;color:#19875b}.mizan-v3-stat-icon.expense{background:#fff0e8;color:#c47750}.mizan-v3-stat-icon.neutral{background:#eaf0fa;color:#647eaf}
+.mizan-v3-stat>strong{display:block;margin-top:10px;color:var(--v3-text);font-size:clamp(23px,2.4vw,33px);font-weight:650;letter-spacing:-.05em;font-variant-numeric:tabular-nums}
+.mizan-v3-stat-foot{display:block;margin-top:9px;font-size:11px;color:var(--v3-muted)}
+.mizan-v3-content{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(280px,1fr);gap:15px}
+.mizan-v3-panel{min-width:0;padding:26px 28px;background:var(--v3-panel);border:1px solid var(--v3-border);border-radius:17px}
+.mizan-v3-panel-heading{display:flex;align-items:start;justify-content:space-between;flex-wrap:wrap;gap:15px}
+.mizan-v3-section-label{font-size:10px;font-weight:700;letter-spacing:.14em;color:#279c74}
+.mizan-v3-panel-heading h2{margin-top:8px;font-size:18px;font-weight:650;letter-spacing:-.035em;color:var(--v3-text)}
+.mizan-v3-panel-heading p{margin-top:5px;font-size:12px;color:var(--v3-muted)}
+.mizan-v3-key{display:flex;gap:13px;margin-top:6px;font-size:11px;color:var(--v3-muted)}
+.mizan-v3-key span{display:inline-flex;align-items:center;gap:6px}
+.mizan-v3-key i,.mizan-v3-category-line i{display:inline-block;width:8px;height:8px;border-radius:50%}
+.mizan-v3-key .income{background:#3eaa83}.mizan-v3-key .expense{background:#f1ad7d}
+.mizan-v3-chart{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:13px;height:245px;margin-top:26px}
+.mizan-v3-chart-col{display:flex;min-width:0;flex-direction:column;align-items:center;gap:12px;font-size:11px;color:var(--v3-muted)}
+.mizan-v3-bars{display:flex;align-items:end;justify-content:center;gap:5px;width:100%;height:100%;border-bottom:1px solid var(--v3-border);background:repeating-linear-gradient(to top,transparent 0,transparent calc(25% - 1px),var(--v3-border) 25%);border-radius:5px}
+.mizan-v3-bar{width:min(25px,38%);border-radius:5px 5px 0 0;min-height:0;transition:height .3s}
+.mizan-v3-bar.income{background:#3eaa83}.mizan-v3-bar.expense{background:#e49a79}
+.mizan-v3-total{margin-top:30px;padding:18px 20px;background:var(--m-surface-2);border-radius:12px}
+.mizan-v3-total span{display:block;font-size:11px;color:var(--v3-muted)}
+.mizan-v3-total strong{display:block;margin-top:7px;font-size:24px;font-weight:650;letter-spacing:-.045em}
+.mizan-v3-category-list{margin-top:24px;display:grid;gap:19px}
+.mizan-v3-category-line{display:flex;justify-content:space-between;gap:10px;margin-bottom:9px;font-size:12px}
+.mizan-v3-category-line>span{display:flex;align-items:center;gap:9px}
+.mizan-v3-category-line strong{font-weight:600}
+.mizan-v3-progress{height:6px;background:var(--m-surface-2);border-radius:8px;overflow:hidden}
+.mizan-v3-progress span{display:block;height:100%;border-radius:8px}
+.mizan-v3-empty{padding:48px 12px;text-align:center;font-size:12px;color:var(--v3-muted)}
+.mizan-v3-view-all{display:flex;align-items:center;gap:7px;font-size:12px;font-weight:600;color:var(--m-accent)}
+.mizan-v3-recent{padding-bottom:8px}
+.mizan-v3-recent-list{margin-top:22px}
+.mizan-v3-recent-row{display:flex;align-items:center;gap:14px;padding:15px 0;border-top:1px solid var(--v3-border)}
+.mizan-v3-recent-icon{display:grid;place-items:center;flex:0 0 40px;height:40px;border-radius:12px}
+.mizan-v3-recent-icon.income{background:#e7f7ee;color:#19875b}.mizan-v3-recent-icon.expense{background:#fff0e8;color:#c47750}
+.mizan-v3-recent-description{display:flex;flex:1;min-width:0;flex-direction:column;gap:5px}
+.mizan-v3-recent-description strong{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:13px;font-weight:600}
+.mizan-v3-recent-description span{font-size:11px;color:var(--v3-muted)}
+.mizan-v3-recent-row>strong{font-size:13px;font-weight:650;white-space:nowrap}
+.mizan-v3-positive{color:#2eaa78}
+.mizan-v3-icon-action{padding:8px;color:var(--v3-muted)}
+.mizan-shell[data-theme="dark"] .mizan-v3-stat-icon.income,.mizan-shell[data-theme="dark"] .mizan-v3-recent-icon.income{background:#1d4130;color:#87dcb0}
+.mizan-shell[data-theme="dark"] .mizan-v3-stat-icon.expense,.mizan-shell[data-theme="dark"] .mizan-v3-recent-icon.expense{background:#483025;color:#f2ae87}
+.mizan-shell[data-theme="dark"] .mizan-v3-stat-icon.neutral{background:#29384a;color:#9fbdf1}
+@media(max-width:1100px){.mizan-v3-content{grid-template-columns:1fr}.mizan-v3-hero-art{margin-right:0;flex-basis:200px}}
+@media(max-width:640px){.mizan-v3-hero{padding:28px 24px;min-height:280px}.mizan-v3-hero-art{display:none}.mizan-v3-stat-grid{grid-template-columns:1fr}.mizan-v3-stat{padding:18px 20px}.mizan-v3-panel{padding:21px 18px}.mizan-v3-chart{height:190px;gap:6px}.mizan-v3-key{width:100%}.mizan-v3-recent-row{gap:9px}.mizan-v3-recent-row>strong{font-size:11px}}
