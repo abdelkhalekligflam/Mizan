@@ -1,5 +1,5 @@
-@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&display=swap');
+@import "tailwindcss";
 :root{--m-bg:#f7f9f8;--m-surface:#fff;--m-surface-2:#f3f6f4;--m-ink:#14221c;--m-muted:#697a70;--m-border:#e4ebe6;--m-accent:#176b50;--m-accent-soft:#e7f3eb;--m-focus:#2e9973;--m-shadow:0 2px 10px rgba(12,32,21,.025)}
 *{box-sizing:border-box}
 html{font-family:Arial,Helvetica,sans-serif;font-synthesis:none}
@@ -239,3 +239,9 @@ html.mizan-dark,html.mizan-dark body{background:#090a0b!important;color:#f2f4f3}
  .mizan-transaction-form{max-height:min(90dvh,800px)!important;max-width:480px;overflow-y:auto!important;border-radius:26px!important;padding:28px!important}
  .mizan-transaction-save{position:sticky!important;bottom:0!important;display:flex!important;visibility:visible!important;min-height:52px;margin-top:8px}
 }
+
+/* Bilingual layout: preserve readable LTR numbers and controls while supporting Arabic copy. */
+.mizan-shell[data-language="ary"] .mizan-page-title h1,.mizan-shell[data-language="ary"] h2,.mizan-shell[data-language="ary"] h3{letter-spacing:normal;line-height:1.55}
+.mizan-shell[data-language="ary"] input[type="text"],.mizan-shell[data-language="ary"] input[type="search"],.mizan-shell[data-language="ary"] textarea{unicode-bidi:plaintext}
+.mizan-shell[data-language="ary"] input[type="date"],.mizan-shell[data-language="ary"] input[type="month"],.mizan-shell[data-language="ary"] input[type="number"]{direction:ltr;text-align:start}
+@media(prefers-reduced-motion:reduce){.mizan-shell *, .mizan-shell *::before,.mizan-shell *::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
