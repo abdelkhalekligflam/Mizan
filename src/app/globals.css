@@ -278,3 +278,37 @@ body{font-feature-settings:"kern";text-rendering:optimizeLegibility}
  .mizan-shell .mizan-v3-balance{font-size:clamp(30px,9vw,44px)}
 }
 @media(prefers-reduced-motion:reduce){.mizan-shell .glass{transition:none}}
+
+
+/* Competitor-inspired redesign: Monarch information density + Copilot restraint.
+   Retains Mizan identity and all existing finance workflows. */
+.mizan-shell{--m-bg:#f6f7f8;--m-surface:#ffffff;--m-surface-2:#f1f3f4;--m-ink:#17211d;--m-muted:#68766f;--m-border:#e5e9e7;--m-accent:#157153;--m-accent-soft:#e8f3ed}
+.mizan-shell[data-theme="dark"]{--m-bg:#101413;--m-surface:#1b211e;--m-surface-2:#252c28;--m-ink:#eef3ef;--m-muted:#a7b3aa;--m-border:#303b34;--m-accent:#8adbb0;--m-accent-soft:#243d30}
+.mizan-shell .mizan-v3-hero{min-height:220px;padding:30px 34px;background:#193b30;border:1px solid #305346;border-radius:18px;box-shadow:none}
+.mizan-shell .mizan-v3-hero:before{display:none}
+.mizan-shell .mizan-v3-hero-art{opacity:.36;transform:scale(.88);transform-origin:right center}
+.mizan-shell .mizan-v3-eyebrow{letter-spacing:.1em}
+.mizan-shell .mizan-v3-stat-grid{gap:12px}
+.mizan-shell .mizan-v3-stat{padding:18px 20px;border-radius:14px;box-shadow:none}
+.mizan-shell .mizan-v3-stat>strong{font-size:clamp(22px,2.2vw,30px)}
+.mizan-shell .mizan-v3-panel{padding:22px 24px;border-radius:16px;box-shadow:none}
+.mizan-shell .mizan-v3-panel-heading h2{font-size:17px}
+.mizan-shell .mizan-v3-recent-row{padding:11px 0;gap:12px}
+.mizan-shell .mizan-v3-recent-icon{flex-basis:36px;height:36px;border-radius:10px}
+.mizan-shell .mizan-sidebar{background:var(--m-surface)!important}
+.mizan-shell .mizan-header{border-color:var(--m-border)}
+.mizan-shell .mizan-dashboard .glass{box-shadow:none}
+.mizan-shell .mizan-v3-stat-icon.income,.mizan-shell .mizan-v3-recent-icon.income{background:#e7f3eb;color:#14724f}
+.mizan-shell .mizan-v3-stat-icon.expense,.mizan-shell .mizan-v3-recent-icon.expense{background:#fff0e9;color:#b65c3d}
+.mizan-shell[data-theme="dark"] .mizan-v3-stat-icon.income,.mizan-shell[data-theme="dark"] .mizan-v3-recent-icon.income{background:#203c2d;color:#8be0aa}
+.mizan-shell[data-theme="dark"] .mizan-v3-stat-icon.expense,.mizan-shell[data-theme="dark"] .mizan-v3-recent-icon.expense{background:#3c2b26;color:#f4a88b}
+.mizan-shell .mizan-mobile-dock{border-color:var(--m-border);background:var(--m-surface);box-shadow:0 12px 32px rgba(15,30,23,.13)}
+.mizan-shell .mizan-mobile-dock button{color:var(--m-muted)}
+.mizan-shell .mizan-mobile-dock button.selected{color:var(--m-accent);background:var(--m-accent-soft)}
+@media(max-width:640px){
+ .mizan-shell .mizan-v3-hero{padding:24px 22px;min-height:185px}
+ .mizan-shell .mizan-v3-hero-art{display:none}
+ .mizan-shell .mizan-v3-stat{padding:16px}
+ .mizan-shell .mizan-v3-panel{padding:19px 17px}
+ .mizan-shell .mizan-v3-recent-row{padding:12px 0}
+}
