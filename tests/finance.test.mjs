@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import {sumAmounts,goalProgress,recurringTotals,availableBalance} from "../src/lib/finance.mjs";
+import {sumAmounts,goalProgress,recurringTotals,availableBalance,monthlyCashFlow,spendingByCategory,budgetHealth} from "../src/lib/finance.mjs";
 test("amounts sum accurately and ignore invalid values",()=>{assert.equal(sumAmounts([{amount:100},{amount:50},{amount:NaN}]),150)});
 test("goal progress is capped and zero target is safe",()=>{assert.equal(goalProgress(50,200),25);assert.equal(goalProgress(200,100),100);assert.equal(goalProgress(10,0),0);assert.equal(goalProgress(-10,100),0)});
 test("only active recurring charges are counted",()=>{assert.deepEqual(recurringTotals([{active:true,type:"expense",amount:100},{active:false,type:"expense",amount:1000},{active:true,type:"income",amount:250}]),{expenses:100,income:250,annualExpenses:1200})});
@@ -12,3 +12,8 @@ test("available balance handles empty ledgers",()=>{assert.equal(availableBalanc
 test("savings withdrawals can restore balance independently",()=>{assert.equal(availableBalance([{type:"expense",amount:40}],[{kind:"withdrawal",amount:100,affects_balance:true}]),60)});
 
 test("goal progress rejects non-finite saved amounts",()=>{assert.equal(goalProgress(NaN,100),0);assert.equal(goalProgress(Infinity,100),0)});
+
+test("monthly cash flow ignores other months and reports savings rate",()=>{assert.deepEqual(monthlyCashFlow([{date:"2026-10-01",type:"income",amount:1000},{date:"2026-10-02",type:"expense",amount:250},{date:"2026-09-30",type:"expense",amount:999}],"2026-10"),{income:1000,expenses:250,net:750,savingsRate:75})});
+test("monthly cash flow avoids division by zero",()=>{assert.equal(monthlyCashFlow([{date:"2026-10-01",type:"expense",amount:20}],"2026-10").savingsRate,null)});
+test("spending categories rank highest first and ignore invalid values",()=>{assert.deepEqual(spendingByCategory([{date:"2026-10-01",type:"expense",category:"Food",amount:30},{date:"2026-10-02",type:"expense",category:"Rent",amount:100},{date:"2026-10-03",type:"expense",category:"Food",amount:20},{date:"2026-09-01",type:"expense",category:"Rent",amount:500}],"2026-10"),[{category:"Rent",amount:100},{category:"Food",amount:50}])});
+test("budget health exposes 80 percent warning and over-budget state",()=>{assert.deepEqual(budgetHealth(80,100),{percent:80,remaining:20,status:"warning"});assert.deepEqual(budgetHealth(120,100),{percent:120,remaining:-20,status:"over"});assert.equal(budgetHealth(0,0).status,"unconfigured")});
