@@ -20,7 +20,7 @@ test("links and form controls have keyboard focus outlines",()=>{
 test("mobile and desktop responsive rules are present",()=>{
  assert.match(styles,/@media\(max-width:640px\)/);
  assert.match(styles,/@media\(min-width:1024px\)/);
- assert.match(page,/mizan-bottom-nav/);
+ assert.match(page,/mizan-mobile-dock/);
  assert.match(page,/mizan-sidebar/);
 });
 test("theme supports dark and light modes",()=>{
