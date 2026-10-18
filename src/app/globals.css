@@ -5,7 +5,7 @@ html{font-family:Arial,Helvetica,sans-serif;font-synthesis:none}
 body{margin:0;background:var(--m-bg);color:var(--m-ink);-webkit-font-smoothing:antialiased}
 button,input,select,textarea{font:inherit}
 button{cursor:pointer}
-button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--m-focus);outline-offset:3px}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--m-focus);outline-offset:3px}
 .glass{background:var(--m-surface);border:1px solid var(--m-border);box-shadow:var(--m-shadow)}
 .mizan-shell{--m-bg:#f7f9f8;--m-surface:#fff;--m-surface-2:#f3f6f4;--m-ink:#14221c;--m-muted:#697a70;--m-border:#e4ebe6;--m-accent:#176b50;--m-accent-soft:#e7f3eb;background:var(--m-bg);color:var(--m-ink);min-height:100vh;transition:background-color .15s,color .15s}
 .mizan-shell[data-theme="dark"],main[data-theme="dark"]{--m-bg:#0d1411;--m-surface:#17211c;--m-surface-2:#202e25;--m-ink:#eef5ef;--m-muted:#a8b9ac;--m-border:#314237;--m-accent:#80cba3;--m-accent-soft:#263c30;--m-shadow:none;background:var(--m-bg);color:var(--m-ink);color-scheme:dark}
