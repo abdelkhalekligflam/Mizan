@@ -10,3 +10,5 @@ test("historical savings that do not affect balance are excluded",()=>{assert.eq
 test("recurring totals ignore inactive and invalid amounts",()=>{assert.deepEqual(recurringTotals([{active:true,type:"expense",amount:NaN},{active:false,type:"income",amount:999},{active:true,type:"income",amount:20}]),{expenses:0,income:20,annualExpenses:0})});
 test("available balance handles empty ledgers",()=>{assert.equal(availableBalance([],[]),0)});
 test("savings withdrawals can restore balance independently",()=>{assert.equal(availableBalance([{type:"expense",amount:40}],[{kind:"withdrawal",amount:100,affects_balance:true}]),60)});
+
+test("goal progress rejects non-finite saved amounts",()=>{assert.equal(goalProgress(NaN,100),0);assert.equal(goalProgress(Infinity,100),0)});
