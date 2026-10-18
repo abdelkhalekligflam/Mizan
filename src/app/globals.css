@@ -244,3 +244,37 @@ html.mizan-dark,html.mizan-dark body{background:#090a0b!important;color:#f2f4f3}
 .mizan-shell[data-language="ary"] input[type="text"],.mizan-shell[data-language="ary"] input[type="search"],.mizan-shell[data-language="ary"] textarea{unicode-bidi:plaintext}
 .mizan-shell[data-language="ary"] input[type="date"],.mizan-shell[data-language="ary"] input[type="month"],.mizan-shell[data-language="ary"] input[type="number"]{direction:ltr;text-align:start}
 @media(prefers-reduced-motion:reduce){.mizan-shell *, .mizan-shell *::before,.mizan-shell *::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+
+/* Mizan UI polish — calm, high-contrast finance workspace. */
+:root{--m-radius-card:18px;--m-radius-control:11px}
+html{font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}
+body{font-feature-settings:"kern";text-rendering:optimizeLegibility}
+.mizan-shell{font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.mizan-shell .glass{border-radius:var(--m-radius-card);transition:border-color .16s ease,background-color .16s ease,box-shadow .16s ease}
+.mizan-shell .glass:hover{border-color:color-mix(in srgb,var(--m-border) 65%,var(--m-accent) 35%)}
+.mizan-shell .mizan-sidebar{border-inline-end:1px solid var(--m-border);box-shadow:none}
+.mizan-shell .mizan-sidebar button{min-height:44px;border-radius:var(--m-radius-control)!important}
+.mizan-shell .mizan-header{gap:16px;min-width:0}
+.mizan-shell .mizan-page-title h1{font-size:clamp(26px,3vw,36px);line-height:1.12;letter-spacing:-.045em}
+.mizan-shell h2,.mizan-shell h3{letter-spacing:-.025em}
+.mizan-shell button,.mizan-shell input,.mizan-shell select,.mizan-shell textarea{max-width:100%}
+.mizan-shell input,.mizan-shell select,.mizan-shell textarea{min-width:0}
+.mizan-shell button:disabled{cursor:not-allowed}
+.mizan-shell button:focus-visible,.mizan-shell a:focus-visible,.mizan-shell input:focus-visible,.mizan-shell select:focus-visible,.mizan-shell textarea:focus-visible{outline:2px solid var(--m-focus);outline-offset:3px}
+.mizan-shell .mizan-v3-stat,.mizan-shell .mizan-v3-panel{border-radius:var(--m-radius-card)}
+.mizan-shell .mizan-v3-balance{font-variant-numeric:tabular-nums;letter-spacing:-.055em}
+.mizan-shell .mizan-v3-recent-row{min-width:0}
+.mizan-shell .mizan-v3-recent-description{min-width:0;overflow-wrap:anywhere}
+.mizan-shell[data-theme="dark"] .glass:hover{border-color:#496b57}
+.mizan-shell[data-theme="dark"] .mizan-sidebar button:hover{background:var(--m-surface-2)}
+@media(max-width:640px){
+ .mizan-shell{padding-inline:16px!important}
+ .mizan-shell .mizan-header{margin-bottom:22px}
+ .mizan-shell .mizan-page-title h1{font-size:28px}
+ .mizan-shell .glass{border-radius:16px}
+ .mizan-shell input,.mizan-shell select,.mizan-shell textarea{font-size:max(16px,1em)}
+ .mizan-mobile-dock button{min-height:44px}
+ .mizan-shell .mizan-v3-balance{font-size:clamp(30px,9vw,44px)}
+}
+@media(prefers-reduced-motion:reduce){.mizan-shell .glass{transition:none}}
