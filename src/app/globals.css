@@ -353,3 +353,27 @@ body{font-feature-settings:"kern";text-rendering:optimizeLegibility}
 .mizan-shell input::placeholder,.mizan-shell textarea::placeholder{color:var(--m-muted);opacity:.8}
 .mizan-shell .mizan-mobile-dock{backdrop-filter:blur(18px)}
 @media(max-width:640px){.mizan-shell .mizan-page-title{margin-bottom:20px}.mizan-shell .mizan-page-title h1{font-size:1.7rem}.mizan-shell .glass{border-radius:15px}.mizan-shell .mizan-v3-stat-grid{gap:10px}}
+
+/* Mizan 2026 workspace redesign */
+.mizan-shell{--m-accent:#147d60;--m-accent-soft:#e5f4ed;--m-bg:#f6f8f7;--m-surface:#fff;--m-surface-2:#eef3f0;--m-ink:#14251e;--m-muted:#65796e;--m-border:#e0e9e3;background:var(--m-bg);color:var(--m-ink)}
+.mizan-shell[data-theme="dark"]{--m-accent:#7ce0ae;--m-accent-soft:#203c2e;--m-bg:#0e1512;--m-surface:#19231e;--m-surface-2:#23332a;--m-ink:#f1f8f2;--m-muted:#a1b5a7;--m-border:#304437}
+.mizan-shell .mizan-sidebar{background:var(--m-surface)!important;border-color:var(--m-border)!important}
+.mizan-shell .mizan-sidebar>div:first-child{margin-bottom:36px}
+.mizan-shell .mizan-sidebar button{border-radius:12px!important;min-height:46px;gap:14px}
+.mizan-shell .mizan-sidebar button[aria-current="page"]{background:var(--m-accent-soft)!important;color:var(--m-accent)!important;box-shadow:inset 3px 0 var(--m-accent);font-weight:700}
+.mizan-shell .mizan-sidebar button:not([aria-current="page"]){color:var(--m-muted)!important}
+.mizan-shell .mizan-sidebar button:not([aria-current="page"]):hover{background:var(--m-surface-2)!important;color:var(--m-ink)!important}
+.mizan-nav-group-label{padding:0 12px 8px;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--m-muted)}
+.mizan-sidebar-tip{display:flex;gap:10px;align-items:flex-start;margin:20px 4px 16px;padding:14px;border-radius:13px;background:var(--m-surface-2);font-size:12px;line-height:1.5;color:var(--m-muted)}
+.mizan-tip-dot{flex:none;width:8px;height:8px;margin-top:5px;border-radius:50%;background:var(--m-accent)}
+.mizan-shell .mizan-account{border-color:var(--m-border);background:var(--m-surface-2)}
+.mizan-shell .mizan-header{border-color:var(--m-border)!important}
+.mizan-shell .mizan-page-title h1{color:var(--m-ink);font-size:clamp(1.65rem,3vw,2.45rem);letter-spacing:-.055em}
+.mizan-shell .mizan-page-title p{color:var(--m-muted)}
+.mizan-shell .glass{background:var(--m-surface);border:1px solid var(--m-border);box-shadow:0 4px 22px rgba(19,48,30,.035)}
+.mizan-shell .mizan-v3-stat{border:1px solid var(--m-border);background:var(--m-surface);box-shadow:0 4px 22px rgba(19,48,30,.035)}
+.mizan-shell .mizan-v3-panel{border:1px solid var(--m-border);background:var(--m-surface);box-shadow:0 4px 22px rgba(19,48,30,.035)}
+.mizan-shell .mizan-mobile-sheet{background:var(--m-surface);color:var(--m-ink);border-color:var(--m-border)}
+.mizan-shell .mizan-mobile-sheet-grid button{background:var(--m-surface-2);color:var(--m-ink);border-color:var(--m-border)}
+.mizan-shell .mizan-mobile-sheet-grid button.selected{background:var(--m-accent-soft);color:var(--m-accent);border-color:var(--m-accent)}
+@media(max-width:640px){.mizan-shell .mizan-page-title h1{font-size:1.75rem}.mizan-shell .mizan-v3-stat{border-radius:14px}.mizan-shell .mizan-v3-panel{border-radius:15px}}
