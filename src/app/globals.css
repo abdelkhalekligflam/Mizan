@@ -602,3 +602,21 @@ body{font-feature-settings:"kern";text-rendering:optimizeLegibility}
 @media(max-width:1200px){.mizan-report-carry-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.mizan-report-carry-grid>.mizan-report-carry-final{grid-column:span 2}}
 @media(max-width:700px){.mizan-shell .mizan-report-carry{padding:17px}.mizan-report-carry-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.mizan-report-carry-grid>.mizan-report-carry-final{grid-column:1/-1}.mizan-report-carry-grid>div{padding:13px}}
 @media(max-width:390px){.mizan-report-carry-grid{grid-template-columns:1fr}.mizan-report-carry-grid>.mizan-report-carry-final{grid-column:auto}}
+
+/* Personalized monthly suggestions */
+.mizan-advice{background:var(--m-surface);border:1px solid var(--m-border);border-radius:14px;padding:24px;color:var(--m-ink)}
+.mizan-advice-header{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;margin-bottom:20px}
+.mizan-advice-header h3{font-size:21px;font-weight:740;letter-spacing:-.035em;margin-top:7px}
+.mizan-advice-header p{font-size:12px;color:var(--m-muted);margin-top:6px}
+.mizan-advice-count{font-size:11px;font-weight:700;color:var(--m-muted);border:1px solid var(--m-border);border-radius:8px;padding:8px 10px}
+.mizan-advice-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.mizan-advice-item{display:flex;align-items:flex-start;gap:12px;background:var(--m-surface-2);border:1px solid var(--m-border);border-radius:11px;padding:18px;min-width:0}
+.mizan-advice-indicator{width:8px;height:8px;flex-shrink:0;border-radius:50%;margin-top:7px;background:#999}
+.mizan-advice-indicator.warning{background:#e6a14d}.mizan-advice-indicator.positive{background:#3caf80}
+.mizan-advice-item>div{min-width:0;flex:1}
+.mizan-advice-item h4{font-size:13px;font-weight:750;line-height:1.5;color:var(--m-ink)}
+.mizan-advice-item p{font-size:12px;color:var(--m-muted);line-height:1.65;margin-top:7px}
+.mizan-advice-item button{flex-shrink:0;font-size:11px;font-weight:700;color:var(--m-ink);border:1px solid var(--m-border);border-radius:7px;padding:7px 9px}
+.mizan-advice-item button:hover{background:var(--m-surface)}
+.mizan-advice-note{margin-top:16px;color:var(--m-muted);font-size:11px;line-height:1.5}
+@media(max-width:850px){.mizan-advice-list{grid-template-columns:1fr}.mizan-advice{padding:18px}}
