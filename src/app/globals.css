@@ -566,3 +566,9 @@ body{font-feature-settings:"kern";text-rendering:optimizeLegibility}
 @media(max-width:1050px){.mizan-report-columns{grid-template-columns:1fr}.mizan-report-summary{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:700px){.mizan-report-summary{grid-template-columns:repeat(2,minmax(0,1fr))}.mizan-report-summary .mizan-report-net{grid-column:1/-1}.mizan-report-summary>div{padding:17px}.mizan-report-summary strong{font-size:23px}.mizan-report-card{padding:18px}.mizan-report-chart{height:195px}.mizan-report-foot{padding:18px}}
 @media(max-width:380px){.mizan-report-summary{grid-template-columns:1fr}.mizan-report-summary .mizan-report-net{grid-column:auto}}
+
+/* Budget rollover: discreet Vercel-style per-category control */
+.mizan-budget-rollover{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:13px;padding:11px 12px;border:1px solid var(--m-border);background:var(--m-surface-2);border-radius:9px}
+.mizan-budget-rollover label{display:flex;align-items:center;gap:9px;cursor:pointer;color:var(--m-ink);font-size:12px;font-weight:600}
+.mizan-budget-rollover input[type="checkbox"]{appearance:auto;accent-color:var(--m-ink);width:15px;height:15px;min-height:15px;cursor:pointer}
+.mizan-budget-rollover small{font-size:11px;color:var(--m-muted)}
