@@ -489,3 +489,32 @@ body{font-feature-settings:"kern";text-rendering:optimizeLegibility}
 .mizan-shell[data-theme="dark"] :is(input,select,textarea)::placeholder{color:#aaa!important}
 .mizan-shell[data-theme="dark"] :is(input,select,textarea):focus-visible{outline-color:#fafafa!important}
 .mizan-shell[data-theme="dark"] .mizan-mobile-sheet-grid button.selected{background:#303030!important;color:#fff!important;border-color:#777!important}
+
+/* Readability repair — savings, recurring schedules and simplified analytics */
+.mizan-shell .mizan-savings-page>section:first-child,
+.mizan-shell .mizan-recurring-page>section:first-child{background:var(--m-surface)!important;border:1px solid var(--m-border)!important;box-shadow:none!important}
+.mizan-shell .mizan-savings-page>section:first-child>div:first-child{display:none}
+.mizan-shell .mizan-savings-page>section:first-child>div.relative>div:first-child{background:#161616!important;box-shadow:none!important}
+.mizan-shell .mizan-savings-page>section:first-child>div.relative>div:first-child strong{color:#fff!important}
+.mizan-shell .mizan-savings-page>section:first-child>div.relative>div:nth-child(2){background:var(--m-surface-2)!important;border-color:var(--m-border)!important;color:var(--m-ink)!important}
+.mizan-shell .mizan-savings-page>section:first-child>div.relative>div:nth-child(2) strong{color:var(--m-ink)!important}
+.mizan-shell .mizan-recurring-page>section:first-child :is(h2,strong){color:var(--m-ink)!important}
+.mizan-shell .mizan-recurring-page>section:first-child p{color:var(--m-muted)!important}
+.mizan-shell .mizan-recurring-page>section:first-child>div>div:nth-child(2)>div{background:var(--m-surface-2)!important;border-color:var(--m-border)!important;color:var(--m-ink)!important;border-radius:12px}
+.mizan-shell .mizan-recurring-page>section:first-child>div>div:nth-child(2)>div strong{color:var(--m-ink)!important}
+.mizan-shell .mizan-recurring-page>section:first-child span[class*="rounded-full"]{background:var(--m-surface-2)!important;border-color:var(--m-border)!important;color:var(--m-ink)!important}
+.mizan-shell .mizan-recurring-page section .rounded-2xl.bg-\[\#f1f8f4\],
+.mizan-shell .mizan-recurring-page section [class*="bg-[#f1f8f4]"]{background:var(--m-surface-2)!important}
+.mizan-shell .mizan-recurring-page section [class*="bg-white"]{background:var(--m-surface-2)!important;color:var(--m-ink)!important}
+.mizan-shell .mizan-recurring-page section [class*="bg-[#111"]{background:var(--m-surface-2)!important;color:var(--m-ink)!important}
+.mizan-shell .mizan-recurring-page section [class*="text-[#142"],.mizan-shell .mizan-recurring-page section [class*="text-[#147"],.mizan-shell .mizan-recurring-page section [class*="text-[#173"]{color:var(--m-ink)!important}
+.mizan-shell .mizan-savings-page section [class*="text-[#173"],.mizan-shell .mizan-savings-page section [class*="text-[#142"]{color:var(--m-ink)!important}
+.mizan-shell .mizan-analytics-simple>section:first-child{background:var(--m-surface);border-color:var(--m-border)}
+.mizan-shell .mizan-analytics-simple>section:first-child>div>div:first-child>div.grid{display:none}
+.mizan-shell .mizan-analytics-simple>section:first-child>div>div:first-child>p:last-child{display:none}
+.mizan-shell .mizan-analytics-simple .glass{background:var(--m-surface)!important;color:var(--m-ink)!important;border-color:var(--m-border)!important}
+.mizan-shell .mizan-analytics-simple .glass strong{color:var(--m-ink)!important}
+.mizan-shell .mizan-analytics-simple .glass p{color:var(--m-muted)}
+.mizan-shell .mizan-analytics-simple>div.grid:first-of-type .glass{padding:20px;border-radius:12px}
+.mizan-shell .mizan-analytics-simple>div.grid:first-of-type .glass strong{font-size:clamp(1.25rem,2vw,1.65rem)}
+@media(max-width:767px){.mizan-shell .mizan-savings-page>section:first-child,.mizan-shell .mizan-recurring-page>section:first-child{padding:15px!important}.mizan-shell .mizan-recurring-page>section:first-child>div>div:nth-child(2){grid-template-columns:1fr}.mizan-shell .mizan-analytics-simple .glass{padding:18px}}
