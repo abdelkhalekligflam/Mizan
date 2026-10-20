@@ -312,3 +312,32 @@ body{font-feature-settings:"kern";text-rendering:optimizeLegibility}
  .mizan-shell .mizan-v3-panel{padding:19px 17px}
  .mizan-shell .mizan-v3-recent-row{padding:12px 0}
 }
+
+/* Unified responsive interaction surfaces across all Mizan modules */
+.mizan-shell{font-feature-settings:"tnum";-webkit-font-smoothing:antialiased}
+.mizan-shell button,.mizan-shell a,.mizan-shell input,.mizan-shell select{transition:background-color .18s ease,border-color .18s ease,color .18s ease,box-shadow .18s ease}
+.mizan-shell button:disabled{cursor:not-allowed;opacity:.55}
+.mizan-shell :is(button,a,input,select,textarea):focus-visible{outline:2px solid var(--m-accent,#278665);outline-offset:3px}
+.mizan-shell .glass{min-width:0;border-color:var(--m-border);border-radius:16px}
+.mizan-shell .mizan-page-title h1{font-size:clamp(1.5rem,2.5vw,2.15rem);line-height:1.15;letter-spacing:-.04em}
+.mizan-shell .mizan-page-title p{max-width:62ch}
+.mizan-shell .mizan-mobile-sheet{background:var(--m-surface);border-color:var(--m-border);color:var(--m-ink);box-shadow:0 18px 48px rgba(0,0,0,.18)}
+.mizan-shell .mizan-mobile-sheet-head p{color:var(--m-muted)}
+.mizan-shell .mizan-mobile-sheet-head>button{border-color:var(--m-border)}
+.mizan-shell .mizan-mobile-sheet-grid button{background:var(--m-surface-2);border-color:var(--m-border);color:var(--m-ink)}
+.mizan-shell .mizan-mobile-sheet-grid button.selected{background:var(--m-accent-soft);border-color:var(--m-accent);color:var(--m-accent)}
+.mizan-shell .mizan-mobile-sheet-grid button:hover{border-color:var(--m-accent)}
+.mizan-shell .mizan-v3-chart{overflow:hidden}
+.mizan-shell .mizan-v3-recent-row{min-width:0}
+@media(max-width:767px){
+ .mizan-shell .mizan-page-title{gap:14px;margin-bottom:20px}
+ .mizan-shell .mizan-page-title h1{font-size:1.65rem}
+ .mizan-shell .mizan-page-title .mizan-primary-action{width:100%;justify-content:center;min-height:46px}
+ .mizan-shell .glass{padding:18px}
+ .mizan-shell .mizan-v3-panel{padding:18px}
+ .mizan-shell .mizan-v3-stat-grid{gap:10px}
+ .mizan-shell .mizan-mobile-sheet{max-height:min(65dvh,550px);overflow-y:auto;overscroll-behavior:contain}
+}
+@media(prefers-reduced-motion:reduce){
+ .mizan-shell button,.mizan-shell a,.mizan-shell input,.mizan-shell select{transition:none}
+}
