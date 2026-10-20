@@ -518,3 +518,51 @@ body{font-feature-settings:"kern";text-rendering:optimizeLegibility}
 .mizan-shell .mizan-analytics-simple>div.grid:first-of-type .glass{padding:20px;border-radius:12px}
 .mizan-shell .mizan-analytics-simple>div.grid:first-of-type .glass strong{font-size:clamp(1.25rem,2vw,1.65rem)}
 @media(max-width:767px){.mizan-shell .mizan-savings-page>section:first-child,.mizan-shell .mizan-recurring-page>section:first-child{padding:15px!important}.mizan-shell .mizan-recurring-page>section:first-child>div>div:nth-child(2){grid-template-columns:1fr}.mizan-shell .mizan-analytics-simple .glass{padding:18px}}
+
+/* Analytics V2 — calm, legible, Vercel-inspired report */
+.mizan-report{--report-green:#36b37e;--report-orange:#a3a3a3;color:var(--m-ink)}
+.mizan-report-toolbar{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:3px 0 10px}
+.mizan-report-eyebrow{font-size:10px;font-weight:800;letter-spacing:.16em;color:var(--m-muted)}
+.mizan-report-toolbar h2{font-size:clamp(22px,2.5vw,30px);font-weight:750;letter-spacing:-.045em;margin-top:7px}
+.mizan-report-toolbar p,.mizan-report-card-head p,.mizan-report-foot p{font-size:13px;color:var(--m-muted);margin-top:5px}
+.mizan-report-filters{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.mizan-report-filters label{font-size:11px;color:var(--m-muted);font-weight:650}
+.mizan-report-filters input,.mizan-report-filters select{background:var(--m-surface)!important;color:var(--m-ink)!important;border:1px solid var(--m-border)!important;border-radius:9px;padding:9px 11px;min-height:40px;font-size:12px}
+.mizan-report-summary{display:grid;grid-template-columns:1.35fr 1fr 1fr;gap:12px}
+.mizan-report-summary>div{min-width:0;border:1px solid var(--m-border);border-radius:13px;padding:23px;background:var(--m-surface)}
+.mizan-report-summary span,.mizan-report-foot>div:nth-child(2) span{display:block;font-size:12px;color:var(--m-muted)}
+.mizan-report-summary strong{display:block;font-size:clamp(22px,2.5vw,33px);font-weight:760;letter-spacing:-.05em;margin-top:14px;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.mizan-report-summary small{display:block;margin-top:10px;color:var(--m-muted);font-size:11px}
+.mizan-report-summary .mizan-report-net{background:var(--m-ink);color:var(--m-bg);border-color:var(--m-ink)}
+.mizan-report-net span,.mizan-report-net small{color:var(--m-bg)!important;opacity:.78}
+.mizan-report-net strong{color:var(--m-bg)!important}
+.mizan-report-columns{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(280px,1fr);gap:14px}
+.mizan-report-card{background:var(--m-surface);border:1px solid var(--m-border);border-radius:13px;padding:24px;min-width:0}
+.mizan-report-card-head{display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.mizan-report-card-head h3,.mizan-report-foot h3{font-size:16px;font-weight:720;letter-spacing:-.025em}
+.mizan-report-legend{display:flex;gap:14px;flex-wrap:wrap}
+.mizan-report-legend span{display:inline-flex;align-items:center;gap:6px;font-size:10px;color:var(--m-muted)}
+.mizan-report-legend i{display:inline-block;width:8px;height:8px;border-radius:2px}
+.mizan-report-legend .income,.mizan-report-bars .income{background:var(--report-green)}
+.mizan-report-legend .expense,.mizan-report-bars .expense{background:var(--report-orange)}
+.mizan-report-chart{height:235px;display:flex;align-items:stretch;gap:8px;padding-top:25px}
+.mizan-report-chart-col{display:flex;flex:1;min-width:0;flex-direction:column;align-items:center;gap:10px}
+.mizan-report-bars{height:100%;width:100%;display:flex;align-items:flex-end;justify-content:center;gap:4px;border-bottom:1px solid var(--m-border)}
+.mizan-report-bars>div{width:min(35%,21px);min-height:0;border-radius:4px 4px 0 0;transition:height .2s}
+.mizan-report-chart-col>span{font-size:10px;color:var(--m-muted);white-space:nowrap}
+.mizan-report-categories{display:flex;flex-direction:column;gap:22px;margin-top:30px}
+.mizan-report-category>div:first-child{display:flex;justify-content:space-between;gap:10px;align-items:center;font-size:12px}
+.mizan-report-category strong{font-size:12px;font-variant-numeric:tabular-nums}
+.mizan-report-track{height:6px;border-radius:9px;background:var(--m-surface-2);overflow:hidden;margin-top:9px}
+.mizan-report-track>div{height:100%;border-radius:9px}
+.mizan-report-link{font-size:12px;font-weight:700;margin-top:24px;color:var(--m-ink);padding:8px 0}
+.mizan-report-link:hover{text-decoration:underline}
+.mizan-report-empty{font-size:13px;color:var(--m-muted);padding:50px 0}
+.mizan-report-foot{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;background:var(--m-surface);border:1px solid var(--m-border);border-radius:13px;padding:22px 24px}
+.mizan-report-foot>div:nth-child(2) strong{display:block;font-size:21px;letter-spacing:-.04em;margin-top:5px}
+.mizan-report-foot button{font-size:12px;font-weight:700;border:1px solid var(--m-border);border-radius:8px;padding:10px 13px;color:var(--m-ink)}
+.mizan-report-foot button:hover{background:var(--m-surface-2)}
+.mizan-report-disclaimer{font-size:11px;color:var(--m-muted);line-height:1.6}
+@media(max-width:1050px){.mizan-report-columns{grid-template-columns:1fr}.mizan-report-summary{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:700px){.mizan-report-summary{grid-template-columns:repeat(2,minmax(0,1fr))}.mizan-report-summary .mizan-report-net{grid-column:1/-1}.mizan-report-summary>div{padding:17px}.mizan-report-summary strong{font-size:23px}.mizan-report-card{padding:18px}.mizan-report-chart{height:195px}.mizan-report-foot{padding:18px}}
+@media(max-width:380px){.mizan-report-summary{grid-template-columns:1fr}.mizan-report-summary .mizan-report-net{grid-column:auto}}
