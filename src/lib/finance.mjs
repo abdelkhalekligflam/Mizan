@@ -27,3 +27,27 @@ export function budgetHealth(spent,limit){
  const percent=Math.max(0,spent)/limit*100;
  return {percent,remaining:limit-spent,status:percent>=100?"over":percent>=80?"warning":"healthy"};
 }
+
+/** Available budget for a month. Rollovers start at activation month, never retroactively.
+ * Only positive unused allocations carry forward; overspending does not create debt.
+ * This is an allocation display, not cash or a new transaction.
+ */
+export function budgetRollover(entries,category,limit,month,enabledFrom){
+ const base=Number.isFinite(limit)&&limit>0?limit:0;
+ const spent=(key)=>entries.reduce((sum,e)=>sum+(e.type==="expense"&&e.category===category&&typeof e.date==="string"&&e.date.slice(0,7)===key&&Number.isFinite(e.amount)?Math.max(0,e.amount):0),0);
+ const valid=/^\d{4}-(0[1-9]|1[0-2])$/;
+ if(!valid.test(month))return {carry:0,available:base,spent:0,remaining:base};
+ const currentSpent=spent(month);
+ if(!enabledFrom||!valid.test(enabledFrom)||enabledFrom>=month||base===0)return {carry:0,available:base,spent:currentSpent,remaining:base-currentSpent};
+ let [year,mon]=enabledFrom.split("-").map(Number);
+ const [endYear,endMon]=month.split("-").map(Number);
+ let carry=0;
+ // Bound the walk for safety if a malformed/ancient activation date is supplied.
+ for(let i=0;i<600&&(year<endYear||(year===endYear&&mon<endMon));i++){
+  const key=`${year}-${String(mon).padStart(2,"0")}`;
+  carry=Math.max(0,base+carry-spent(key));
+  mon++;if(mon===13){mon=1;year++}
+ }
+ const available=base+carry;
+ return {carry,available,spent:currentSpent,remaining:available-currentSpent};
+}
