@@ -421,3 +421,41 @@ body{font-feature-settings:"kern";text-rendering:optimizeLegibility}
 @media(max-width:1180px){.mizan-v4-quick-links{grid-template-columns:repeat(2,minmax(0,1fr))}.mizan-shell .mizan-v3-hero{grid-template-columns:minmax(0,1fr) minmax(240px,.8fr);gap:20px;padding:30px}}
 @media(max-width:767px){.mizan-shell .mizan-v3-hero{grid-template-columns:1fr;gap:23px;padding:25px 21px;min-height:0}.mizan-shell .mizan-v3-hero-label{margin-top:24px}.mizan-shell .mizan-v3-balance{font-size:clamp(32px,9vw,46px)}.mizan-v4-hero-insights{padding:17px}.mizan-v4-quick-links{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.mizan-v4-quick-link{padding:13px 10px;gap:9px}.mizan-v4-quick-icon{width:34px;height:34px}.mizan-v4-quick-arrow{display:none}.mizan-v4-quick-copy small{font-size:9px}.mizan-shell .mizan-header{margin-bottom:22px}}
 @media(max-width:370px){.mizan-v4-quick-links{grid-template-columns:1fr}}
+
+/* Vercel-inspired monochrome theme and accessible navigation */
+.mizan-shell{--m-bg:#fafafa;--m-surface:#fff;--m-surface-2:#f5f5f5;--m-ink:#171717;--m-muted:#737373;--m-border:#e5e5e5;--m-accent:#171717;--m-accent-soft:#f1f1f1;background:var(--m-bg);color:var(--m-ink)}
+.mizan-shell[data-theme="dark"]{--m-bg:#090909;--m-surface:#111;--m-surface-2:#1b1b1b;--m-ink:#ededed;--m-muted:#a3a3a3;--m-border:#303030;--m-accent:#fafafa;--m-accent-soft:#262626;background:var(--m-bg);color:var(--m-ink)}
+.mizan-shell .mizan-sidebar{height:100dvh;overflow:hidden;padding:20px 12px!important;background:var(--m-surface)!important;border-right:1px solid var(--m-border)!important}
+.mizan-shell .mizan-sidebar>div:first-child{flex-shrink:0;margin-bottom:24px}
+.mizan-shell .mizan-sidebar-links{flex:1 1 0;min-height:0;overflow-y:auto;overscroll-behavior:contain;padding:2px 4px 12px;scrollbar-width:thin;scrollbar-color:var(--m-border) transparent}
+.mizan-shell .mizan-sidebar-links button{flex-shrink:0;width:100%;min-height:42px;padding:10px 12px;border-radius:8px!important;color:var(--m-muted)!important;background:transparent!important;box-shadow:none!important}
+.mizan-shell .mizan-sidebar-links button[aria-current="page"]{background:var(--m-accent-soft)!important;color:var(--m-ink)!important;font-weight:700}
+.mizan-shell .mizan-sidebar-links button:hover{background:var(--m-surface-2)!important;color:var(--m-ink)!important}
+.mizan-shell .mizan-sidebar-tip{flex-shrink:0;background:var(--m-surface-2);border:1px solid var(--m-border);color:var(--m-muted);margin:8px 4px;padding:10px}
+.mizan-shell .mizan-tip-dot{background:var(--m-ink)}
+.mizan-shell .mizan-account{flex-shrink:0;border:1px solid var(--m-border);background:var(--m-surface-2);color:var(--m-ink)}
+.mizan-shell .mizan-account p,.mizan-shell .mizan-account svg{color:var(--m-muted)}
+.mizan-shell .mizan-header{border-color:var(--m-border)!important}
+.mizan-shell .mizan-header button:not(.mizan-avatar){background:var(--m-surface)!important;color:var(--m-ink)!important;border:1px solid var(--m-border)!important;border-radius:9px}
+.mizan-shell .mizan-header button:hover{background:var(--m-surface-2)!important}
+.mizan-shell .mizan-page-title h1{color:var(--m-ink)}
+.mizan-shell .mizan-primary-action{background:var(--m-ink)!important;color:var(--m-bg)!important;border:1px solid var(--m-ink);box-shadow:none;border-radius:9px}
+.mizan-shell .glass,.mizan-shell .mizan-v3-panel,.mizan-shell .mizan-v3-stat{background:var(--m-surface);border:1px solid var(--m-border);color:var(--m-ink);box-shadow:none}
+.mizan-shell .mizan-v3-section-label{color:var(--m-muted)}
+.mizan-shell .mizan-v3-hero{background:#111!important;border-color:#333!important;box-shadow:none}
+.mizan-shell .mizan-v3-hero-actions button:first-child{background:#fafafa;color:#111}
+.mizan-shell .mizan-v3-hero-actions button+button{background:#262626;color:#fafafa;border:1px solid #454545}
+.mizan-shell .mizan-v4-quick-link{background:var(--m-surface);border-color:var(--m-border);color:var(--m-ink);box-shadow:none}
+.mizan-shell .mizan-v4-quick-link:hover{border-color:var(--m-muted)}
+.mizan-shell .mizan-v4-quick-icon{background:var(--m-surface-2);color:var(--m-ink)}
+.mizan-shell .mizan-v4-status span{background:#e5e5e5}
+.mizan-shell .mizan-mobile-sheet{background:var(--m-surface);border-color:var(--m-border);color:var(--m-ink)}
+.mizan-shell .mizan-mobile-sheet-grid button{background:var(--m-surface-2);border-color:var(--m-border);color:var(--m-ink)}
+.mizan-shell .mizan-mobile-sheet-grid button.selected{background:var(--m-accent-soft);color:var(--m-ink);border-color:var(--m-muted)}
+.mizan-shell .mizan-mobile-dock{background:var(--m-surface);border-color:var(--m-border)}
+.mizan-shell .mizan-mobile-dock button{color:var(--m-muted)}
+.mizan-shell .mizan-mobile-dock button.active{color:var(--m-ink);background:var(--m-accent-soft)}
+.mizan-shell :is(input,select,textarea){background:var(--m-surface);color:var(--m-ink);border-color:var(--m-border)}
+.mizan-shell :is(input,select,textarea):focus-visible{outline-color:var(--m-ink)}
+@media(max-height:760px) and (min-width:1024px){.mizan-shell .mizan-sidebar-tip{display:none}.mizan-shell .mizan-sidebar>div:first-child{margin-bottom:15px}}
+@media(max-width:767px){.mizan-shell .mizan-v3-hero{border-radius:14px}.mizan-shell .mizan-v4-quick-link{border-radius:10px}}
