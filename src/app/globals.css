@@ -341,3 +341,15 @@ body{font-feature-settings:"kern";text-rendering:optimizeLegibility}
 @media(prefers-reduced-motion:reduce){
  .mizan-shell button,.mizan-shell a,.mizan-shell input,.mizan-shell select{transition:none}
 }
+
+/* Unified workspace navigation and spacing */
+.mizan-shell .mizan-sidebar button[aria-current="page"]{background:var(--m-accent-soft)!important;color:var(--m-accent)!important;font-weight:700;box-shadow:inset 3px 0 var(--m-accent)}
+.mizan-shell .mizan-sidebar button:not([aria-current="page"]):hover{background:var(--m-surface-2)!important;color:var(--m-ink)!important}
+.mizan-shell .mizan-header{margin-bottom:24px;padding-bottom:16px}
+.mizan-shell .mizan-page-title{margin-bottom:26px}
+.mizan-shell .mizan-page-title h1{font-weight:750;letter-spacing:-.045em}
+.mizan-shell .glass{border-color:var(--m-border);border-radius:16px}
+.mizan-shell .mizan-v3-stat strong,.mizan-shell .mizan-v3-panel strong{font-variant-numeric:tabular-nums;letter-spacing:-.025em}
+.mizan-shell input::placeholder,.mizan-shell textarea::placeholder{color:var(--m-muted);opacity:.8}
+.mizan-shell .mizan-mobile-dock{backdrop-filter:blur(18px)}
+@media(max-width:640px){.mizan-shell .mizan-page-title{margin-bottom:20px}.mizan-shell .mizan-page-title h1{font-size:1.7rem}.mizan-shell .glass{border-radius:15px}.mizan-shell .mizan-v3-stat-grid{gap:10px}}
