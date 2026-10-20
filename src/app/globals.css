@@ -459,3 +459,33 @@ body{font-feature-settings:"kern";text-rendering:optimizeLegibility}
 .mizan-shell :is(input,select,textarea):focus-visible{outline-color:var(--m-ink)}
 @media(max-height:760px) and (min-width:1024px){.mizan-shell .mizan-sidebar-tip{display:none}.mizan-shell .mizan-sidebar>div:first-child{margin-bottom:15px}}
 @media(max-width:767px){.mizan-shell .mizan-v3-hero{border-radius:14px}.mizan-shell .mizan-v4-quick-link{border-radius:10px}}
+
+/* Contrast repair: explicit Vercel-style control tokens, independent of legacy rules */
+.mizan-shell{--m-button-bg:#171717;--m-button-fg:#fafafa;--m-control-bg:#fff;--m-control-fg:#171717}
+.mizan-shell[data-theme="dark"]{--m-button-bg:#fafafa;--m-button-fg:#111;--m-control-bg:#181818;--m-control-fg:#f5f5f5}
+.mizan-shell button.mizan-primary-action,
+.mizan-shell[data-theme="dark"] button.mizan-primary-action{
+  background:var(--m-button-bg)!important;color:var(--m-button-fg)!important;
+  border:1px solid var(--m-button-bg)!important;opacity:1;box-shadow:none!important;
+}
+.mizan-shell button.mizan-primary-action svg{color:inherit!important;stroke:currentColor!important}
+.mizan-shell button.mizan-primary-action:hover{filter:brightness(.88)}
+.mizan-shell[data-theme="dark"] button.mizan-primary-action:hover{background:#ddd!important;color:#111!important}
+.mizan-shell[data-theme="dark"] .mizan-header button:not(.mizan-avatar){background:var(--m-control-bg)!important;color:var(--m-control-fg)!important;border-color:var(--m-border)!important}
+.mizan-shell[data-theme="dark"] .mizan-header button:not(.mizan-avatar) svg{stroke:currentColor!important}
+.mizan-shell[data-theme="dark"] .mizan-page-title h1{color:#f5f5f5!important}
+.mizan-shell[data-theme="dark"] .mizan-page-title p{color:#aaa!important}
+.mizan-shell[data-theme="dark"] .mizan-v4-quick-link{background:#141414!important;color:#f5f5f5!important;border-color:#303030!important}
+.mizan-shell[data-theme="dark"] .mizan-v4-quick-link strong{color:#f5f5f5!important}
+.mizan-shell[data-theme="dark"] .mizan-v4-quick-link small{color:#aaa!important}
+.mizan-shell[data-theme="dark"] .mizan-v4-quick-icon{background:#242424!important;color:#f5f5f5!important}
+.mizan-shell[data-theme="dark"] .mizan-sidebar-links button{color:#b5b5b5!important}
+.mizan-shell[data-theme="dark"] .mizan-sidebar-links button[aria-current="page"]{background:#272727!important;color:#fff!important}
+.mizan-shell[data-theme="dark"] .mizan-sidebar-links button:hover{background:#242424!important;color:#fff!important}
+.mizan-shell[data-theme="dark"] .mizan-account{background:#1a1a1a!important;color:#f5f5f5!important;border-color:#343434!important}
+.mizan-shell[data-theme="dark"] .mizan-account p:first-child{color:#f5f5f5!important}
+.mizan-shell[data-theme="dark"] .mizan-account p:last-child{color:#aaa!important}
+.mizan-shell[data-theme="dark"] :is(input,select,textarea){background:#171717!important;color:#f5f5f5!important;border-color:#383838!important;color-scheme:dark}
+.mizan-shell[data-theme="dark"] :is(input,select,textarea)::placeholder{color:#aaa!important}
+.mizan-shell[data-theme="dark"] :is(input,select,textarea):focus-visible{outline-color:#fafafa!important}
+.mizan-shell[data-theme="dark"] .mizan-mobile-sheet-grid button.selected{background:#303030!important;color:#fff!important;border-color:#777!important}
