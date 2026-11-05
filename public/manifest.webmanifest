@@ -1,0 +1,21 @@
+{
+  "id": "/",
+  "name": "Mizan — Finance personnelle",
+  "short_name": "Mizan",
+  "description": "Gérez vos revenus, dépenses, budgets et objectifs d’épargne.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0d1411",
+  "theme_color": "#0d1411",
+  "lang": "fr",
+  "icons": [
+    {
+      "src": "/mizan-mark.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
